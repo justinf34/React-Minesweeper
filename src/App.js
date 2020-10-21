@@ -25,11 +25,10 @@ export default class App extends Component {
       <Paper>
         <h1>Minesweeper</h1>
         <div className="game-container">
-          <Header
+          <Board
             diff={this.state.difficulty}
-            onChange={this.changeDifficulty}
-          ></Header>
-          <Board diff={this.state.difficulty}></Board>
+            changeDifficulty={this.changeDifficulty}
+          ></Board>
         </div>
       </Paper>
     );
