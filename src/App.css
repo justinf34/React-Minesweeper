@@ -12,9 +12,13 @@
   justify-content: space-around;
   align-items: center;
   margin-bottom: 1rem;
+  width: 100%;
+  max-width: calc(70vh);
+  flex-wrap: wrap;
 }
 
-.timer {
+.timer-container,
+.flag-container {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -23,6 +27,8 @@
 .grid {
   display: grid;
   width: calc(70vh);
+  max-width: 800px;
+  padding: 5px;
 }
 
 .grid.easy {
@@ -37,15 +43,67 @@
   display: flex;
   justify-content: center;
   align-items: stretch;
+  width: 100%;
 }
 
 .cell {
-  background: #fff;
+  background: #a9a9b0;
   border: 0.01rem solid #414c69;
   height: auto;
   width: auto;
   text-align: center;
   cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cell.flag {
+  background-image: url(./assets/flags.svg);
+}
+
+.cell.bomb {
+  background-image: url(./assets/bomb.svg);
+  background-color: #ffffff;
+}
+
+.cell.mine1 {
+  background-image: url(./assets/1.svg);
+}
+
+.cell.mine2 {
+  background-image: url(./assets/2.svg);
+}
+
+.cell.mine3 {
+  background-image: url(./assets/3.svg);
+}
+
+.cell.mine4 {
+  background-image: url(./assets/4.svg);
+}
+
+.cell.mine5 {
+  background-image: url(./assets/5.svg);
+}
+
+.cell.mine6 {
+  background-image: url(./assets/6.svg);
+}
+
+.cell.mine7 {
+  background-image: url(./assets/7.svg);
+}
+
+.cell.mine8 {
+  background-image: url(./assets/8.svg);
+}
+
+.cell.opened {
+  background-color: #ffffff;
+}
+
+.grid > div::before {
+  content: "";
+  padding-bottom: 100%;
   display: block;
-  margin: 0.1rem;
 }

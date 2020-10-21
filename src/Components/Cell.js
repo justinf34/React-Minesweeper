@@ -49,18 +49,33 @@ export default class Cell extends Component {
     this.props.mark(this.props.y, this.props.x);
   }
 
+  getClass() {
+    switch (this.props.val) {
+      case "H":
+        return "";
+      case "F":
+        return "flag";
+      case "M":
+        return "bomb";
+      default:
+        if (Number(this.props.val) == 0) {
+          return "opened";
+        } else {
+          return "opened" + " " + "mine" + this.props.val;
+        }
+    }
+  }
+
   render() {
     return (
       <div
-        className="cell"
+        className={"cell" + " " + this.getClass()}
         onMouseDown={this.handleButtonPress}
         onMouseUp={this.handleButtonRelease}
         onTouchStart={this.handleButtonPress}
         onTouchEnd={this.handleButtonRelease}
         onContextMenu={this.rightClick}
-      >
-        {this.props.val}
-      </div>
+      ></div>
     );
   }
 }
