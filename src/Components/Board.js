@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Cell from "./Cell";
+import GameOver from "./GameOver";
 import MSGame from "../utils/game-engine";
 
 export default class Board extends Component {
@@ -8,10 +9,12 @@ export default class Board extends Component {
 
     this.state = {
       game: new MSGame(),
+      open: false,
     };
 
     this.uncover = this.uncover.bind(this);
     this.mark = this.mark.bind(this);
+    this.handleClose = this.handleClose.bind(this);
   }
 
   renderBoard(board) {
@@ -40,7 +43,7 @@ export default class Board extends Component {
         ")\n",
         this.state.game.getRendering().join("\n")
       );
-      this.setState({});
+      this.checkStatus();
     }
   }
 
@@ -53,6 +56,17 @@ export default class Board extends Component {
         ")\n",
         this.state.game.getRendering().join("\n")
       );
+      this.checkStatus();
+    }
+  }
+
+  checkStatus() {
+    const gameStat = this.state.game.getStatus();
+    if (gameStat.done) {
+      this.setState((state, props) => {
+        return { open: true };
+      });
+    } else {
       this.setState({});
     }
   }
@@ -79,6 +93,13 @@ export default class Board extends Component {
     });
   }
 
+  handleClose() {
+    console.log("Closing dialog...");
+    this.setState((state, props) => {
+      return { open: false };
+    });
+  }
+
   componentDidMount() {
     this.initBoard();
   }
@@ -92,11 +113,22 @@ export default class Board extends Component {
 
   render() {
     const { game } = this.state;
+    const gameStatus = game.getStatus();
     return (
       <div className="gridwrapper">
         <div className={"grid" + " " + this.props.diff.toLowerCase()}>
           {this.renderBoard(game.getRendering())}
         </div>
+        <GameOver
+          open={this.state.open}
+          game_state={
+            gameStatus.nuncovered ===
+            gameStatus.nrows * gameStatus.ncols - gameStatus.nmines
+          }
+          time_elapsed={0}
+          num_flags={gameStatus.nmarked}
+          onClose={this.handleClose}
+        />
       </div>
     );
   }
