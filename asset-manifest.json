@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/React-Minesweeper/static/css/main.cb906b54.chunk.css",
-    "main.js": "/React-Minesweeper/static/js/main.b2356ab1.chunk.js",
-    "main.js.map": "/React-Minesweeper/static/js/main.b2356ab1.chunk.js.map",
+    "main.js": "/React-Minesweeper/static/js/main.2812b7fc.chunk.js",
+    "main.js.map": "/React-Minesweeper/static/js/main.2812b7fc.chunk.js.map",
     "runtime-main.js": "/React-Minesweeper/static/js/runtime-main.e1fdb0d8.js",
     "runtime-main.js.map": "/React-Minesweeper/static/js/runtime-main.e1fdb0d8.js.map",
     "static/js/2.6b2bd56c.chunk.js": "/React-Minesweeper/static/js/2.6b2bd56c.chunk.js",
     "static/js/2.6b2bd56c.chunk.js.map": "/React-Minesweeper/static/js/2.6b2bd56c.chunk.js.map",
     "index.html": "/React-Minesweeper/index.html",
-    "precache-manifest.03ed0d4aac3a7c70f2538167d2acee46.js": "/React-Minesweeper/precache-manifest.03ed0d4aac3a7c70f2538167d2acee46.js",
+    "precache-manifest.dd21d4669cb3277c7703b06dde8fb695.js": "/React-Minesweeper/precache-manifest.dd21d4669cb3277c7703b06dde8fb695.js",
     "service-worker.js": "/React-Minesweeper/service-worker.js",
     "static/css/main.cb906b54.chunk.css.map": "/React-Minesweeper/static/css/main.cb906b54.chunk.css.map",
     "static/js/2.6b2bd56c.chunk.js.LICENSE.txt": "/React-Minesweeper/static/js/2.6b2bd56c.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.e1fdb0d8.js",
     "static/js/2.6b2bd56c.chunk.js",
     "static/css/main.cb906b54.chunk.css",
-    "static/js/main.b2356ab1.chunk.js"
+    "static/js/main.2812b7fc.chunk.js"
   ]
 }
