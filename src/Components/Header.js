@@ -46,13 +46,13 @@ export default function Header(props) {
         <MenuItem value="Easy">Easy</MenuItem>
         <MenuItem value="Medium">Medium</MenuItem>
       </Select>
-      <div className="flag-contaier">
+      <div className="flag-container">
         <span id="flag-logo">
           <FlagIcon />
         </span>
         <span id="flag-counter">{props.flags}</span>
       </div>
-      <div className="timer">
+      <div className="timer-container">
         <span id="clock-logo">
           <AccessAlarmIcon />
         </span>{" "}
