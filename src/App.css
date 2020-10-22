@@ -55,6 +55,9 @@
   cursor: pointer;
   background-repeat: no-repeat;
   background-size: cover;
+  margin: 2px;
+  border-radius: 10%;
+  border: none;
 }
 
 .cell.flag {
