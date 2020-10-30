@@ -66,6 +66,23 @@ export default class Cell extends Component {
     }
   }
 
+  getValue() {
+    switch (this.props.val) {
+      case "H":
+        return "";
+      case "F":
+        return "🚩";
+      case "M":
+        return "💣";
+      default:
+        if (Number(this.props.val) == 0) {
+          return "";
+        } else {
+          return `${this.props.val}`;
+        }
+    }
+  }
+
   render() {
     return (
       <div
@@ -75,7 +92,11 @@ export default class Cell extends Component {
         onTouchStart={this.handleButtonPress}
         onTouchEnd={this.handleButtonRelease}
         onContextMenu={this.rightClick}
-      ></div>
+      >
+        <div className="content">
+          <span>{this.getValue()}</span>
+        </div>
+      </div>
     );
   }
 }

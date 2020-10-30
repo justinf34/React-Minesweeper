@@ -48,10 +48,9 @@
 
 .cell {
   background: #a9a9b0;
-  border: 0.01rem solid #414c69;
+  position: relative;
   height: auto;
-  width: auto;
-  text-align: center;
+  /* text-align: center; */
   cursor: pointer;
   background-repeat: no-repeat;
   background-size: cover;
@@ -61,52 +60,67 @@
 }
 
 .cell.flag {
-  background-image: url(./assets/flags.svg);
+  /* background-image: url(./assets/flags.svg); */
 }
 
 .cell.bomb {
-  background-image: url(./assets/bomb.svg);
+  /* background-image: url(./assets/bomb.svg); */
   background-color: #ffffff;
 }
 
 .cell.mine1 {
-  background-image: url(./assets/1.svg);
+  /* background-image: url(./assets/1.svg); */
 }
 
 .cell.mine2 {
-  background-image: url(./assets/2.svg);
+  /* background-image: url(./assets/2.svg); */
 }
 
 .cell.mine3 {
-  background-image: url(./assets/3.svg);
+  /* background-image: url(./assets/3.svg); */
 }
 
 .cell.mine4 {
-  background-image: url(./assets/4.svg);
+  /* background-image: url(./assets/4.svg); */
 }
 
 .cell.mine5 {
-  background-image: url(./assets/5.svg);
+  /* background-image: url(./assets/5.svg); */
 }
 
 .cell.mine6 {
-  background-image: url(./assets/6.svg);
+  /* background-image: url(./assets/6.svg); */
 }
 
 .cell.mine7 {
-  background-image: url(./assets/7.svg);
+  /* background-image: url(./assets/7.svg); */
 }
 
 .cell.mine8 {
-  background-image: url(./assets/8.svg);
+  /* background-image: url(./assets/8.svg); */
 }
 
 .cell.opened {
   background-color: #ffffff;
 }
 
-.grid > div::before {
+/* .grid > div::before {
   content: "";
   padding-bottom: 100%;
   display: block;
+} */
+
+.cell:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
